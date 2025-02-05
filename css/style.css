@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+#todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#todo-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#add-btn {
+    padding: 12px 20px;
+    background: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#add-btn:hover {
+    background: #ff6347;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.2s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+li:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+li input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+li input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.checkmark {
+    margin-left: 10px;
+    color: #28a745; /* Green color for the checkmark */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+li .delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+li .delete-btn:hover {
+    background: #ff1a1a;
+}
+
+/* Additional Styling */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+}
